@@ -8,5 +8,9 @@ namespace MidTerm
 {
     class Checkout
     {
+		public static void CheckoutM()
+		{
+			
+		}
     }
 }
