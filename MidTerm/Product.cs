@@ -10,9 +10,9 @@ namespace MidTerm
 {
     class Product
     {
-		public static string Dairy()
-        {
+		//public static string Dairy()
+  //      {
 
-        }
+  //      }
     }
 }

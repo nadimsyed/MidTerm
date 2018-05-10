@@ -1,3 +1,0 @@
-Water	0.99	16.9 Fl oz	Spring water
-Tea	1.10	16.9 Fl oz	Green tea
-Gatorade	1.50	20 Fl oz	Electrolytes Baby!
