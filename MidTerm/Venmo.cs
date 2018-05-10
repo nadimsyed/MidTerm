@@ -11,6 +11,8 @@ namespace MidTerm
     {
 		public static void PayCash()
         {
+			Regex ValidateVenmoUN = new Regex("^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$");
+
             Console.WriteLine("Great you are paying with Venmo!");
 
             while (true)
@@ -19,7 +21,7 @@ namespace MidTerm
 				string VenmoUsername = Console.ReadLine();
 
 
-				if (Regex.IsMatch(VenmoUsername, "^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$"))
+				if (ValidateVenmoUN.IsMatch(VenmoUsername))
 				{
 					Console.WriteLine($"Thanks, your Venmo account {VenmoUsername} has been charged!");
 					break;
