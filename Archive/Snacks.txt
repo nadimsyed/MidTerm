@@ -1,0 +1,3 @@
+Chips	0.99	Snacks	3.5oz	Crunchy corn chips
+Cookies	1.50	Snacks	2 Cookies	Chocolate chip cookies
+Granola Bar	0.50	Snacks	1 Bar	Oats and Honey

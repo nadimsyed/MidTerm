@@ -1,0 +1,3 @@
+Butter	2.79	Dairy	16oz	Salted Butter
+Cheese	2.99	Dairy	8oz	Mozzarella Cheese
+Milk	1.19	Dairy	1 Gal	Whole

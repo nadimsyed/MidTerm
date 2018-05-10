@@ -1,0 +1,3 @@
+Apple	1.99	Produce	1lb	Gala
+Pear	2.50	Produce	1lb	Green pears
+Banana	0.49	Produce	1lb	Ripe yellow bananas

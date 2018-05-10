@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MidTerm", "MidTerm\MidTerm.csproj", "{0061DE5A-CD16-4773-AA69-1D035955C19F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "MidTerm\Program.csproj", "{0061DE5A-CD16-4773-AA69-1D035955C19F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2EDDA6A7-7C64-4823-AA2B-5CA36B287C1F}"
 	ProjectSection(SolutionItems) = preProject
