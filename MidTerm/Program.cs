@@ -12,7 +12,6 @@ namespace MidTerm
     {
         static void Main(string[] args)
         {
-			bool ItemChoice = true;
 			
             Console.WriteLine("Hello!  Welcome Ran Groceries!");
             Console.WriteLine();
@@ -21,7 +20,9 @@ namespace MidTerm
 
             while (true)
 			{
-				Console.WriteLine("Please select a category below");
+                bool ItemChoice = true;
+
+                Console.WriteLine("Please select a category below");
 				Console.WriteLine("1. Dairy");
 				Console.WriteLine("2. Produce");
 				Console.WriteLine("3. Meats");
