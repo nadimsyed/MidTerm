@@ -10,6 +10,7 @@ namespace MidTerm
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
