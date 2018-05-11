@@ -14,6 +14,83 @@ namespace MidTerm
 
         public static ArrayList Products { get => products; set => products = value; }
 
+        //can change stock but makes spaces and seperates the stock spot to seperate lines
+        //cannot override original file, can make a new file
+//        Water	0.99	Beverages	16.9 Fl oz  Spring water	20
+//Tea	1.10	Beverages	16.9 Fl oz  Green tea	20
+//Gatorade Beverages	1.50	20 Fl oz    Electrolytes Baby!	20
+
+            //Figure out how to append, will have to redo the file from scratch
+        //public static void OverrideBeveragesStock(int x, int newStock)
+        //{
+        //    ArrayList Products = new ArrayList();
+
+        //    int a = 0;
+        //    int b = 0;
+        //    string price = "";
+        //    StreamReader sr = null;
+
+        //    sr = new StreamReader("Beverages.txt");
+
+        //    while (!sr.EndOfStream)
+        //    {
+        //        String line = sr.ReadLine();
+
+        //        string[] z = line.Split('\t');
+
+        //        Products.Add(z);
+        //        //a++;
+        //        //if (a == x)
+        //        //{
+        //        //    price = z[5];
+
+        //        //}
+
+        //        StreamWriter sw = null;
+        //        try
+        //        {
+        //            sw = new StreamWriter("Beverages.txt");
+
+        //            foreach (string name in z)
+        //            {
+        //                if (b == x)
+        //                {
+        //                    b++;
+        //                    //string newStockString = newStock.ToString();
+        //                    int stock = int.Parse(z[5]);
+        //                    stock = newStock;
+        //                    string newStockString = stock.ToString();
+        //                    //z[5] = newStockString;
+        //                    sw.WriteLine(newStockString);
+        //                }
+        //                else
+        //                {
+        //                    b++;
+        //                    //Console.WriteLine(name);
+        //                    sw.WriteLine(name);
+        //                }
+        //            }
+        //        }
+        //        catch (UnauthorizedAccessException)
+        //        {
+        //            Console.WriteLine("File access denied");
+        //        }
+        //        catch (Exception e)
+        //        {
+        //            Console.WriteLine(e.Message);
+        //            Console.WriteLine("Please convey this error to IT. Exiting...");
+        //            throw;
+        //        }
+        //        finally
+        //        {
+        //            if (sw != null)
+        //            {
+        //                sw.Close();
+        //            }
+        //        }
+        //    }
+        //}
+
         public static string GrabSnacksStock(int x)
         {
             ArrayList Products = new ArrayList();
