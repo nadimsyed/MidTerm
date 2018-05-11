@@ -59,7 +59,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(1), quantityNum);
+                                    Product.RunningCart(Inventory.GrabDairyName(1), quantityNum, Inventory.GrabDairyPrice(1));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(1)}\n\n");
                                     move = false;
                                 }
@@ -103,8 +103,8 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(2), quantityNum);
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(1)}\n\n");
+                                    Product.RunningCart(Inventory.GrabDairyName(2), quantityNum, Inventory.GrabDairyPrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(2)}\n\n");
                                     move = false;
                                 }
                                 else
@@ -147,8 +147,8 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(3), quantityNum);
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(1)}\n\n");
+                                    Product.RunningCart(Inventory.GrabDairyName(3), quantityNum, Inventory.GrabDairyPrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(3)}\n\n");
                                     move = false;
                                 }
                                 else
@@ -208,7 +208,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(1), quantityNum);
+                                    Product.RunningCart(Inventory.GrabProduceName(1), quantityNum, Inventory.GrabProducePrice(1));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(1)}\n\n");
                                     move = false;
                                 }
@@ -252,7 +252,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(2), quantityNum);
+                                    Product.RunningCart(Inventory.GrabProduceName(2), quantityNum, Inventory.GrabProducePrice(2));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(2)}\n\n");
                                     move = false;
                                 }
@@ -296,7 +296,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(3), quantityNum);
+                                    Product.RunningCart(Inventory.GrabProduceName(3), quantityNum, Inventory.GrabProducePrice(3));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(3)}\n\n");
                                     move = false;
                                 }
@@ -358,7 +358,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(1), quantityNum);
+                                    Product.RunningCart(Inventory.GrabMeatsName(1), quantityNum, Inventory.GrabMeatsPrice(1));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(1)}\n\n");
                                     move = false;
                                 }
@@ -402,7 +402,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(2), quantityNum);
+                                    Product.RunningCart(Inventory.GrabMeatsName(2), quantityNum, Inventory.GrabMeatsPrice(2));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(2)}\n\n");
                                     move = false;
                                 }
@@ -446,7 +446,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(3), quantityNum);
+                                    Product.RunningCart(Inventory.GrabMeatsName(3), quantityNum, Inventory.GrabMeatsPrice(3));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(3)}\n\n");
                                     move = false;
                                 }
@@ -508,7 +508,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(1), quantityNum);
+                                    Product.RunningCart(Inventory.GrabSnacksName(1), quantityNum, Inventory.GrabSnacksPrice(1));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(1)}\n\n");
                                     move = false;
                                 }
@@ -552,7 +552,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(2), quantityNum);
+                                    Product.RunningCart(Inventory.GrabSnacksName(2), quantityNum, Inventory.GrabSnacksPrice(2));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(2)}\n\n");
                                     move = false;
                                 }
@@ -596,7 +596,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(3), quantityNum);
+                                    Product.RunningCart(Inventory.GrabSnacksName(3), quantityNum, Inventory.GrabSnacksPrice(3));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(3)}\n\n");
                                     move = false;
                                 }
@@ -658,7 +658,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(1), quantityNum);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(1), quantityNum, Inventory.GrabBeveragesPrice(1));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(1)}\n\n");
                                     move = false;
                                 }
@@ -702,7 +702,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(2), quantityNum);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(2), quantityNum, Inventory.GrabBeveragesPrice(2));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(2)}\n\n");
                                     move = false;
                                 }
@@ -746,7 +746,7 @@ namespace MidTerm
                                 if (Validator.IntChecker(quantity))
                                 {
                                     int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(3), quantityNum);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(3), quantityNum, Inventory.GrabBeveragesPrice(3));
                                     Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(3)}\n\n");
                                     move = false;
                                 }
