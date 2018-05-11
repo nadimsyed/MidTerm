@@ -10,9 +10,16 @@ namespace MidTerm
 {
     class Product
     {
-		//public static string Dairy()
-  //      {
+        private static ArrayList shoppingCart = new ArrayList();
 
-  //      }
+        public static ArrayList ShoppingCart { get => shoppingCart; set => shoppingCart = value; }
+
+        public static ArrayList RunningCart(string itemName, int itemQuantity)
+        {
+            string quantityString = itemQuantity.ToString();
+            string itemAndQuantity = itemName + " " + quantityString;
+            ShoppingCart.Add(itemAndQuantity);
+            return ShoppingCart;
+        }
     }
 }
