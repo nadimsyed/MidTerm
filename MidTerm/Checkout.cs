@@ -11,15 +11,20 @@ namespace MidTerm
     {
 		public static void CheckoutM()
 		{
-            Console.Write($"Your total is : {total}");
+            Console.Write($"Your total is : ");
 
             foreach (string item in Product.ShoppingCart)
             {           
                ArrayList ModifyShoppingCartPrices= new ArrayList();              
                 Console.WriteLine(item);
                 ModifyShoppingCartPrices.Add(item);
-                item.Split(' ');
-                double ChangingStringtoInt= (double)ModifyShoppingCartPrices[1];
+                string[] items = item.Split(' ');
+                double ChangingStringtoInt= (double)ModifyShoppingCartPrices[1]
+                //Inventory.GrabBeveragesPrice();
+                //Inventory.GrabDairyPrice();
+                //Inventory.GrabMeatsPrice();
+                //Inventory.GrabProducePrice();
+                //Inventory.GrabSnacksPrice();
                 
 
             }
@@ -36,9 +41,9 @@ namespace MidTerm
                 //    itemValue * [itemKey]
                 //);
             }
-            var subTotal = calculateSubTotal(Product.ShoppingCart);
-            var salesTax = calculateSalesTax(Product.ShoppingCart);
-            var total = calculateTotal(Product.ShoppingCart);
+            //double subTotal = calculateSubTotal(Product.ShoppingCart);
+            //double salesTax = calculateSalesTax(Product.ShoppingCart);
+            //double total = calculateTotal(Product.ShoppingCart);
 
             Console.WriteLine("Thank you for shopping with us!");
 

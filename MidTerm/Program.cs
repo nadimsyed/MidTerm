@@ -19,7 +19,8 @@ namespace MidTerm
             Console.WriteLine("What would you like to buy?");
             Console.WriteLine();
 
-            while (true)
+            bool truth = true;
+            while (truth)
             {
                 bool ItemChoice = true;
 
@@ -68,8 +69,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if(!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (DairyChoice == "2" || DairyChoice == "Cheese")
                         {
@@ -94,8 +113,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (DairyChoice == "3" || DairyChoice == "Milk")
                         {
@@ -120,8 +157,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else
                         {
@@ -163,8 +218,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (ProduceChoice == "2" || ProduceChoice == "Pear")
                         {
@@ -189,8 +262,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (ProduceChoice == "3" || ProduceChoice == "Banana")
                         {
@@ -215,8 +306,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else
                         {
@@ -259,8 +368,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (MeatChoice == "2" || MeatChoice == "filet mignon" || MeatChoice == "filet")
                         {
@@ -285,8 +412,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (MeatChoice == "3" || MeatChoice == "ground beef" || MeatChoice == "beef")
                         {
@@ -311,8 +456,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else
                         {
@@ -355,8 +518,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (SnackChoice == "2" || SnackChoice == "cookies" || SnackChoice == "cookie")
                         {
@@ -381,8 +562,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (SnackChoice == "3" || SnackChoice == "granola bar" || SnackChoice == "granola")
                         {
@@ -407,8 +606,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else
                         {
@@ -451,8 +668,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (BeverageChoice == "2" || BeverageChoice == "tea")
                         {
@@ -477,8 +712,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else if (BeverageChoice == "3" || BeverageChoice == "gatorade")
                         {
@@ -503,8 +756,26 @@ namespace MidTerm
                                     continue;
                                 }
                             }
-
-                            ItemChoice = false;
+                            bool movein = Continue();
+                            if (movein)
+                            {
+                                ItemChoice = false;
+                                truth = true;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                            }
+                            else if (!movein)
+                            {
+                                ItemChoice = false;
+                                truth = false;
+                                Console.WriteLine();
+                                Console.WriteLine();
+                                Console.WriteLine("All items on your shopping cart is below");
+                                foreach (string prod in Product.ShoppingCart)
+                                {
+                                    Console.WriteLine(prod);
+                                }
+                            }
                         }
                         else
                         {
@@ -516,6 +787,30 @@ namespace MidTerm
                 else
                 {
                     Console.WriteLine("Sorry that was not an option");
+                }
+            }
+        }
+
+        public static bool Continue()
+        {
+            while (true)
+            {
+                Console.Write("Do you want to keep adding things to your shopping cart?(Y) Or do you want to show your shopping cart?(N) (Enter Y/N): ");
+
+                string jump = Console.ReadLine().ToUpper();
+
+                if (jump == "N")
+                {
+                    return false;
+                }
+                else if (jump == "Y")
+                {
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine("Input was not \"y\" or \"n\"! Please try again!");
+                    continue;
                 }
             }
         }
