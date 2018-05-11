@@ -226,6 +226,33 @@ namespace MidTerm
             return price;
         }
 
+        public static string GrabDairyName(int x)
+        {
+            ArrayList Products = new ArrayList();
+
+            int a = 0;
+            string name = "";
+            StreamReader sr = null;
+
+            sr = new StreamReader("Dairy.txt");
+
+            while (!sr.EndOfStream)
+            {
+                String line = sr.ReadLine();
+
+                string[] z = line.Split('\t');
+
+                Products.Add(z);
+                a++;
+                if (a == x)
+                {
+                    name = z[0];
+
+                }
+            }
+            return name;
+        }
+
         public static string GrabDairyPrice(int x)
         {
             ArrayList Products = new ArrayList();
@@ -251,6 +278,33 @@ namespace MidTerm
                 }
             }
             return price;
+        }
+
+        public static string GrabMeatsName(int x)
+        {
+            ArrayList Products = new ArrayList();
+
+            int a = 0;
+            string name = "";
+            StreamReader sr = null;
+
+            sr = new StreamReader("Meats.txt");
+
+            while (!sr.EndOfStream)
+            {
+                String line = sr.ReadLine();
+
+                string[] z = line.Split('\t');
+
+                Products.Add(z);
+                a++;
+                if (a == x)
+                {
+                    name = z[0];
+
+                }
+            }
+            return name;
         }
 
         public static string GrabMeatsPrice(int x)
@@ -280,6 +334,33 @@ namespace MidTerm
             return price;
         }
 
+        public static string GrabProduceName(int x)
+        {
+            ArrayList Products = new ArrayList();
+
+            int a = 0;
+            string name = "";
+            StreamReader sr = null;
+
+            sr = new StreamReader("Produce.txt");
+
+            while (!sr.EndOfStream)
+            {
+                String line = sr.ReadLine();
+
+                string[] z = line.Split('\t');
+
+                Products.Add(z);
+                a++;
+                if (a == x)
+                {
+                    name = z[0];
+
+                }
+            }
+            return name;
+        }
+
         public static string GrabProducePrice(int x)
         {
             ArrayList Products = new ArrayList();
@@ -307,6 +388,33 @@ namespace MidTerm
             return price;
         }
 
+        public static string GrabSnacksName(int x)
+        {
+            ArrayList Products = new ArrayList();
+
+            int a = 0;
+            string name = "";
+            StreamReader sr = null;
+
+            sr = new StreamReader("Snacks.txt");
+
+            while (!sr.EndOfStream)
+            {
+                String line = sr.ReadLine();
+
+                string[] z = line.Split('\t');
+
+                Products.Add(z);
+                a++;
+                if (a == x)
+                {
+                    name = z[0];
+
+                }
+            }
+            return name;
+        }
+
         public static string GrabSnacksPrice(int x)
         {
             ArrayList Products = new ArrayList();
@@ -332,6 +440,33 @@ namespace MidTerm
                 }
             }
             return price;
+        }
+
+        public static string GrabBeveragesName(int x)
+        {
+            ArrayList Products = new ArrayList();
+
+            int a = 0;
+            string name = "";
+            StreamReader sr = null;
+
+            sr = new StreamReader("Beverages.txt");
+
+            while (!sr.EndOfStream)
+            {
+                String line = sr.ReadLine();
+
+                string[] z = line.Split('\t');
+
+                Products.Add(z);
+                a++;
+                if (a == x)
+                {
+                    name = z[0];
+
+                }
+            }
+            return name;
         }
 
         public static string GrabBeveragesPrice(int x)
