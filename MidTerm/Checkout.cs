@@ -14,24 +14,31 @@ namespace MidTerm
 
             foreach (string item in Product.ShoppingCart)
             {
+
                 Console.WriteLine(item);
             }
 
             Console.WriteLine("--- Receipt ---");
             foreach (string item in Product.ShoppingCart)
             {
-                Console.WriteLine
-                (
-                    "",
-                    item.Value,
-                    item.Key,
-                    [item.Key],
-                    item.Value * [item.Key]
-                );
+                //Console.WriteLine
+                //(
+                //    "",
+                //    itemValue,
+                //    itemKey,
+                //    [itemKey],
+                //    itemValue * [itemKey]
+                //);
             }
-            var subTotal = calculateSubTotal(order);
-            var salesTax = calculateSalesTax(order);
-            var total = calculateTotal(order);
+            var subTotal = calculateSubTotal(Product.ShoppingCart);
+            var salesTax = calculateSalesTax(Product.ShoppingCart);
+            var total = calculateTotal(Product.ShoppingCart);
+
+            Console.WriteLine("Thank you for shopping with us!");
+
+        }
+        public static void ReturntoShop()
+        {
 
         }
     }

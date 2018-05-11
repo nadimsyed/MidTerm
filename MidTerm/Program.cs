@@ -37,9 +37,13 @@ namespace MidTerm
                     {
                         Console.WriteLine("Please select an item below:");
                         Console.WriteLine();
-                        Console.WriteLine("1. Butter $2.79"); //Filler text for right now
-                        Console.WriteLine("2. Cheese $2.99");
-                        Console.WriteLine("3. Milk $1.19");
+                        //for (int i = 0; i < Inventory.Products.Count; i++)
+                        //{
+                        //    Console.WriteLine(Inventory.GrabDairy(i)); 
+                        //}
+                        Console.WriteLine(Inventory.GrabDairy(1));
+                        Console.WriteLine(Inventory.GrabDairy(2));
+                        Console.WriteLine(Inventory.GrabDairy(3));
                         string DairyChoice = Console.ReadLine().ToLower();
 
                         if (DairyChoice == "1" || DairyChoice == "butter")
@@ -75,9 +79,9 @@ namespace MidTerm
                     {
                         Console.WriteLine("Please select an item below:");
                         Console.WriteLine();
-                        Console.WriteLine("1. Apple $1.99"); //Filler text for right now
-                        Console.WriteLine("2. Pear $2.50");
-                        Console.WriteLine("3. Banana $0.49");
+                        Console.WriteLine(Inventory.GrabProduce(1));
+                        Console.WriteLine(Inventory.GrabProduce(2));
+                        Console.WriteLine(Inventory.GrabProduce(3));
                         string ProduceChoice = Console.ReadLine().ToLower();
 
                         if (ProduceChoice == "1" || ProduceChoice == "apple")
@@ -114,9 +118,9 @@ namespace MidTerm
                     {
                         Console.WriteLine("Please select an item below:");
                         Console.WriteLine();
-                        Console.WriteLine("1. Chicken Breast $ 9.99"); //Filler text for right now
-                        Console.WriteLine("2. Filet Mignon $19.99");
-                        Console.WriteLine("3. Ground Beef $ 6.49");
+                        Console.WriteLine(Inventory.GrabMeats(1));
+                        Console.WriteLine(Inventory.GrabMeats(2));
+                        Console.WriteLine(Inventory.GrabMeats(3));
                         string MeatChoice = Console.ReadLine().ToLower();
 
                         if (MeatChoice == "1" || MeatChoice == "chicken breast" || MeatChoice == "chicken")
@@ -153,9 +157,9 @@ namespace MidTerm
                     {
                         Console.WriteLine("Please select an item below:");
                         Console.WriteLine();
-                        Console.WriteLine("1. Chips $0.99"); //Filler text for right now
-                        Console.WriteLine("2. Cookies $1.50");
-                        Console.WriteLine("3. Granola Bar $0.49");
+                        Console.WriteLine(Inventory.GrabSnacks(1));
+                        Console.WriteLine(Inventory.GrabSnacks(2));
+                        Console.WriteLine(Inventory.GrabSnacks(3));
                         string SnackChoice = Console.ReadLine().ToLower();
 
                         if (SnackChoice == "1" || SnackChoice == "chips")
@@ -192,9 +196,9 @@ namespace MidTerm
                     {
                         Console.WriteLine("Please select an item below:");
                         Console.WriteLine();
-                        Console.WriteLine("1. Water $0.99"); //Filler text for right now
-                        Console.WriteLine("2. Tea $1.09");
-                        Console.WriteLine("3. Gatorade $1.49");
+                        Console.WriteLine(Inventory.GrabBeverages(1));
+                        Console.WriteLine(Inventory.GrabBeverages(2));
+                        Console.WriteLine(Inventory.GrabBeverages(3));
                         string BeverageChoice = Console.ReadLine().ToLower();
 
                         if (BeverageChoice == "1" || BeverageChoice == "water")
