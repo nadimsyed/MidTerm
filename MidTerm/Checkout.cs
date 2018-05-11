@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,14 @@ namespace MidTerm
             Console.Write($"Your total is : {total}");
 
             foreach (string item in Product.ShoppingCart)
-            {
-
+            {           
+               ArrayList ModifyShoppingCartPrices= new ArrayList();              
                 Console.WriteLine(item);
+                ModifyShoppingCartPrices.Add(item);
+                item.Split(' ');
+                double ChangingStringtoInt= (double)ModifyShoppingCartPrices[1];
+                
+
             }
 
             Console.WriteLine("--- Receipt ---");
