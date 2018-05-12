@@ -58,9 +58,12 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(1), quantityNum, Inventory.GrabDairyPrice(1));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(1)}\n\n");
+                                    //int quantityNum = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabDairyName(1), quantity, Inventory.GrabDairyPrice(1));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(1)}\n\n");
+                                    //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                                    //  the other spots
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
                                     move = false;
                                 }
                                 else
@@ -102,9 +105,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(2), quantityNum, Inventory.GrabDairyPrice(2));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(2)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabDairyName(2), quantity, Inventory.GrabDairyPrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(2)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -146,9 +151,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabDairyName(3), quantityNum, Inventory.GrabDairyPrice(3));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabDairyName(3)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabDairyName(3), quantity, Inventory.GrabDairyPrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(3)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -207,9 +214,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(1), quantityNum, Inventory.GrabProducePrice(1));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(1)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabProduceName(1), quantity, Inventory.GrabProducePrice(1));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(1)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -251,9 +260,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(2), quantityNum, Inventory.GrabProducePrice(2));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(2)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabProduceName(2), quantity, Inventory.GrabProducePrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(2)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -295,9 +306,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabProduceName(3), quantityNum, Inventory.GrabProducePrice(3));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabProduceName(3)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabProduceName(3), quantity, Inventory.GrabProducePrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(3)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -357,9 +370,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(1), quantityNum, Inventory.GrabMeatsPrice(1));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(1)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabMeatsName(1), quantity, Inventory.GrabMeatsPrice(1));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(1)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -401,9 +416,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(2), quantityNum, Inventory.GrabMeatsPrice(2));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(2)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabMeatsName(2), quantity, Inventory.GrabMeatsPrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(2)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -445,9 +462,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabMeatsName(3), quantityNum, Inventory.GrabMeatsPrice(3));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabMeatsName(3)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabMeatsName(3), quantity, Inventory.GrabMeatsPrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(3)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -507,9 +526,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(1), quantityNum, Inventory.GrabSnacksPrice(1));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(1)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabSnacksName(1), quantity, Inventory.GrabSnacksPrice(1));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(1)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -551,9 +572,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(2), quantityNum, Inventory.GrabSnacksPrice(2));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(2)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabSnacksName(2), quantity, Inventory.GrabSnacksPrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(2)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -595,9 +618,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabSnacksName(3), quantityNum, Inventory.GrabSnacksPrice(3));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabSnacksName(3)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabSnacksName(3), quantity, Inventory.GrabSnacksPrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(3)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -657,9 +682,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(1), quantityNum, Inventory.GrabBeveragesPrice(1));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(1)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(1), quantity, Inventory.GrabBeveragesPrice(1));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(1)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -701,9 +728,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(2), quantityNum, Inventory.GrabBeveragesPrice(2));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(2)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(2), quantity, Inventory.GrabBeveragesPrice(2));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(2)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else
@@ -745,9 +774,11 @@ namespace MidTerm
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
-                                    int quantityNum = int.Parse(quantity);
-                                    Product.RunningCart(Inventory.GrabBeveragesName(3), quantityNum, Inventory.GrabBeveragesPrice(3));
-                                    Console.WriteLine($"\n\nSuccessfully added {quantityNum}: {Inventory.GrabBeveragesName(3)}\n\n");
+                                    //int quantity = int.Parse(quantity);
+                                    Product.RunningCart(Inventory.GrabBeveragesName(3), quantity, Inventory.GrabBeveragesPrice(3));
+                                    Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(3)}\n\n");
+                                    Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
                                     move = false;
                                 }
                                 else

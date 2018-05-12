@@ -14,10 +14,9 @@ namespace MidTerm
 
         public static ArrayList ShoppingCart { get => shoppingCart; set => shoppingCart = value; }
 
-        public static ArrayList RunningCart(string itemName, int itemQuantity, string itemPrice)
+        public static ArrayList RunningCart(string itemName, string itemQuantity, string itemPrice)
         {
-            string quantityString = itemQuantity.ToString();
-            string itemAndQuantity = itemName + " " + quantityString + " " + itemPrice;
+            string itemAndQuantity = itemName + " " + itemQuantity + " " + itemPrice;
             ShoppingCart.Add(itemAndQuantity);
             return ShoppingCart;
         }
