@@ -84,50 +84,5 @@ namespace MidTerm
             }
             return GrandTotal;
         }
-
-		//public static void CheckoutM()
-		//{
-  //          Console.Write($"Your total is : ");
-
-            
-
-  //          foreach (string item in Product.ShoppingCart)
-  //          {           
-  //              ArrayList ModifyShoppingCartPrices= new ArrayList();              
-  //              Console.WriteLine(item);
-                
-  //              string[] items = item.Split(' ');
-  //              double JustPrice = double.Parse(items[2]);
-  //              double JustQuantity = double.Parse(items[1]);
-  //              //double ChangingQuantitytoDouble = (double)ModifyShoppingCartPrices[1];
-  //              //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
-  //              double SubtotalofCart= JustPrice*JustQuantity;
-  //              double SalesTax = SubtotalofCart * .06;
-
-  //          }
-
-  //          Console.WriteLine("--- Receipt ---");
-  //          foreach (string item in Product.ShoppingCart)
-  //          {
-  //              //Console.WriteLine
-  //              //(
-  //              //    "",
-  //              //    itemValue,
-  //              //    itemKey,
-  //              //    [itemKey],
-  //              //    itemValue * [itemKey]
-  //              //);
-  //          }
-  //          //double subTotal = calculateSubTotal(Product.ShoppingCart);
-  //          //double salesTax = calculateSalesTax(Product.ShoppingCart);
-  //          //double total = calculateTotal(Product.ShoppingCart);
-
-  //          Console.WriteLine("Thank you for shopping with us!");
-
-  //      }
-  //      public static void ReturntoShop()
-  //      {
-
-  //      }
     }
 }

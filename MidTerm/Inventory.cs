@@ -14,6 +14,80 @@ namespace MidTerm
 
         public static ArrayList Products { get => products; set => products = value; }
 
+        //public static void AddItem()
+        //{
+        //    bool truth = true;
+        //    while (truth)
+        //    {
+        //        Console.WriteLine("Do you want to add an item to the inventory? (Y/N)");
+        //        string input = Console.ReadLine().ToLower();
+        //        if (!Validator.IntChecker(input) || !Validator.SpaceEnterChecker(input))
+        //        {
+        //            if(input == "y")
+        //            {
+        //                Console.Write("Admin, please enter the password to get authorization: ");
+        //                string password = Console.ReadLine();
+        //                if(password == "GroceryStoreGCMidTerm")
+        //                {
+        //                    Console.WriteLine("Password confirmed");
+        //                    bool selection = true;
+        //                    while (selection)
+        //                    {
+        //                        Console.WriteLine("Choose the category you want to add to from the selection below");
+        //                        Console.WriteLine("1. Dairy");
+        //                        Console.WriteLine("2. Produce");
+        //                        Console.WriteLine("3. Meats");
+        //                        Console.WriteLine("4. Snacks");
+        //                        Console.WriteLine("5. Beverages");
+        //                        string selection = Console.ReadLine().ToLower();
+        //                        if (selection == "1" || selection == "dairy")
+        //                        {
+
+        //                        }
+        //                        else if (selection == "2" || selection == "produce")
+        //                        {
+
+        //                        }
+        //                        else if (selection == "3" || selection == "meats")
+        //                        {
+
+        //                        }
+        //                        else if (selection == "4" || selection == "snacks")
+        //                        {
+
+        //                        }
+        //                        else if (selection == "5" || selection == "beverages")
+        //                        {
+
+        //                        }
+        //                        else
+        //                        {
+        //                            Console.WriteLine("Not a valid selection. Selection will be shown again below");
+        //                        } 
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    Console.WriteLine("Incorrect password");
+        //                }
+        //            }
+        //            else if(input == "n")
+        //            {
+        //                Console.WriteLine("Nothing added to inventory");
+        //                truth = false;
+        //            }
+        //            else
+        //            {
+        //                Console.WriteLine("Could not confirm. Please try again.");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Invalid input. Let's try again!");
+        //        } 
+        //    }
+        //}
+
         //can change stock but makes spaces and seperates the stock spot to seperate lines
         //cannot override original file, can make a new file
 //        Water	0.99	Beverages	16.9 Fl oz  Spring water	20
@@ -523,6 +597,44 @@ namespace MidTerm
             return pick;
         }
 
+        public static int BeveragesCount()
+        {
+            ArrayList Products = new ArrayList();
+
+            StreamReader sr = null;
+
+            int count = 0;
+            try
+            {
+                sr = new StreamReader("Beverages.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    String line = sr.ReadLine();
+
+                    string[] x = line.Split('\t');
+
+                    Products.Add(x);
+
+                    count++;
+
+                }
+                Console.WriteLine("End of file");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error reading file");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            return count;
+        }
+
         public static void Beverages()
         {
             ArrayList Products = new ArrayList();
@@ -594,6 +706,44 @@ namespace MidTerm
                 }
             }
             return pick;
+        }
+
+        public static int SnacksCount()
+        {
+            ArrayList Products = new ArrayList();
+
+            StreamReader sr = null;
+
+            int count = 0;
+            try
+            {
+                sr = new StreamReader("Snacks.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    String line = sr.ReadLine();
+
+                    string[] x = line.Split('\t');
+
+                    Products.Add(x);
+
+                    count++;
+
+                }
+                Console.WriteLine("End of file");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error reading file");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            return count;
         }
 
         public static void Snacks()
@@ -669,6 +819,44 @@ namespace MidTerm
             return pick;
         }
 
+        public static int ProduceCount()
+        {
+            ArrayList Products = new ArrayList();
+
+            StreamReader sr = null;
+
+            int count = 0;
+            try
+            {
+                sr = new StreamReader("Produce.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    String line = sr.ReadLine();
+
+                    string[] x = line.Split('\t');
+
+                    Products.Add(x);
+
+                    count++;
+
+                }
+                Console.WriteLine("End of file");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error reading file");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            return count;
+        }
+
         public static void Produce()
         {
             ArrayList Products = new ArrayList();
@@ -742,6 +930,44 @@ namespace MidTerm
             return pick;
         }
 
+        public static int MeatsCount()
+        {
+            ArrayList Products = new ArrayList();
+
+            StreamReader sr = null;
+
+            int count = 0;
+            try
+            {
+                sr = new StreamReader("Meats.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    String line = sr.ReadLine();
+
+                    string[] x = line.Split('\t');
+
+                    Products.Add(x);
+
+                    count++;
+
+                }
+                Console.WriteLine("End of file");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error reading file");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            return count;
+        }
+
         public static void Meats()
         {
             ArrayList Products = new ArrayList();
@@ -813,6 +1039,44 @@ namespace MidTerm
                 }
             }
             return pick;
+        }
+
+        public static int DairyCount()
+        {
+            ArrayList Products = new ArrayList();
+
+            StreamReader sr = null;
+
+            int count = 0;
+            try
+            {
+                sr = new StreamReader("Dairy.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    String line = sr.ReadLine();
+
+                    string[] x = line.Split('\t');
+
+                    Products.Add(x);
+
+                    count++;
+
+                }
+                Console.WriteLine("End of file");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error reading file");
+            }
+            finally
+            {
+                if (sr != null)
+                {
+                    sr.Close();
+                }
+            }
+            return count;
         }
 
         public static void Dairy()

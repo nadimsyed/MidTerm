@@ -12,6 +12,7 @@ namespace MidTerm
     {
         static void Main(string[] args)
         {
+            //Console.WriteLine(Inventory.Products.Count); 
             WorkHorse.MainWork();
         }
     }
