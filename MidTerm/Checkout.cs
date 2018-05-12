@@ -30,7 +30,8 @@ namespace MidTerm
 
         public static string SubTotalCart(ArrayList arrayList)
         {
-            string SubTotal = "";
+            double SubTotal = 0;
+            string SubTotalS = "";
             foreach (string item in arrayList)
 	        {
                 string[] items = item.Split(' ');
@@ -42,9 +43,9 @@ namespace MidTerm
                 //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
                 double SubtotalofCart = JustPrice * JustQuantity;
                 //change to plus equal to have running total
-                SubTotal += SubtotalofCart.ToString();  
+                SubTotal += SubtotalofCart;  
             }
-            return SubTotal;
+            return SubTotalS = SubTotal.ToString();
         }
 
         public static string TaxingSales(ArrayList arrayList)
@@ -53,12 +54,13 @@ namespace MidTerm
             foreach (string item in arrayList)
             {
                 string[] items = item.Split(' ');
-                double JustPrice = double.Parse(item[2].ToString());
-                double JustQuantity = double.Parse(item[1].ToString());
+                double JustPrice = double.Parse(items[2]);
+                double JustQuantity = double.Parse(items[1]);
                 //double ChangingQuantitytoDouble = (double)ModifyShoppingCartPrices[1];
                 //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
                 double total = double.Parse(SubTotalCart(Product.ShoppingCart));
-                double salesTax = total * .06;
+                double Tax = total * .06;
+                double salesTax = Math.Round(Tax, 2);
 
                 SalesTax = salesTax.ToString();
             }
@@ -70,8 +72,8 @@ namespace MidTerm
             foreach (string item in arrayList)
             {
                 string[] items = item.Split(' ');
-                double JustPrice = double.Parse(item[2].ToString());
-                double JustQuantity = double.Parse(item[1].ToString());
+                double JustPrice = double.Parse(items[2]);
+                double JustQuantity = double.Parse(items[1]);
                 //double ChangingQuantitytoDouble = (double)ModifyShoppingCartPrices[1];
                 //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
                 double total = double.Parse(SubTotalCart(Product.ShoppingCart));
@@ -83,49 +85,49 @@ namespace MidTerm
             return GrandTotal;
         }
 
-		public static void CheckoutM()
-		{
-            Console.Write($"Your total is : ");
+		//public static void CheckoutM()
+		//{
+  //          Console.Write($"Your total is : ");
 
             
 
-            foreach (string item in Product.ShoppingCart)
-            {           
-                ArrayList ModifyShoppingCartPrices= new ArrayList();              
-                Console.WriteLine(item);
+  //          foreach (string item in Product.ShoppingCart)
+  //          {           
+  //              ArrayList ModifyShoppingCartPrices= new ArrayList();              
+  //              Console.WriteLine(item);
                 
-                string[] items = item.Split(' ');
-                double JustPrice = double.Parse(item[2].ToString());
-                double JustQuantity = double.Parse(item[1].ToString());
-                //double ChangingQuantitytoDouble = (double)ModifyShoppingCartPrices[1];
-                //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
-                double SubtotalofCart= JustPrice*JustQuantity;
-                double SalesTax = SubtotalofCart * .06;
+  //              string[] items = item.Split(' ');
+  //              double JustPrice = double.Parse(items[2]);
+  //              double JustQuantity = double.Parse(items[1]);
+  //              //double ChangingQuantitytoDouble = (double)ModifyShoppingCartPrices[1];
+  //              //double ChangingPricetoDouble = (double)ModifyShoppingCartPrices[2];
+  //              double SubtotalofCart= JustPrice*JustQuantity;
+  //              double SalesTax = SubtotalofCart * .06;
 
-            }
+  //          }
 
-            Console.WriteLine("--- Receipt ---");
-            foreach (string item in Product.ShoppingCart)
-            {
-                //Console.WriteLine
-                //(
-                //    "",
-                //    itemValue,
-                //    itemKey,
-                //    [itemKey],
-                //    itemValue * [itemKey]
-                //);
-            }
-            //double subTotal = calculateSubTotal(Product.ShoppingCart);
-            //double salesTax = calculateSalesTax(Product.ShoppingCart);
-            //double total = calculateTotal(Product.ShoppingCart);
+  //          Console.WriteLine("--- Receipt ---");
+  //          foreach (string item in Product.ShoppingCart)
+  //          {
+  //              //Console.WriteLine
+  //              //(
+  //              //    "",
+  //              //    itemValue,
+  //              //    itemKey,
+  //              //    [itemKey],
+  //              //    itemValue * [itemKey]
+  //              //);
+  //          }
+  //          //double subTotal = calculateSubTotal(Product.ShoppingCart);
+  //          //double salesTax = calculateSalesTax(Product.ShoppingCart);
+  //          //double total = calculateTotal(Product.ShoppingCart);
 
-            Console.WriteLine("Thank you for shopping with us!");
+  //          Console.WriteLine("Thank you for shopping with us!");
 
-        }
-        public static void ReturntoShop()
-        {
+  //      }
+  //      public static void ReturntoShop()
+  //      {
 
-        }
+  //      }
     }
 }

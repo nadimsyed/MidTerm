@@ -8,6 +8,41 @@ namespace MidTerm
 {
     class Total_Calc
     {
+        public static void Payment()
+        {
+            bool move = true;
+            while (move)
+            {
+                Console.WriteLine("Do you want to pay with Cash, Credit Card, or Venmo?");
+                string input = Console.ReadLine().ToLower();
+
+                if (!Validator.IntChecker(input) || !Validator.SpaceEnterChecker(input))
+                {
+                    if(input == "cash")
+                    {
+                        PayCash();
+                    }
+                    else if (input == "credit card")
+                    {
+                        PayCredit();
+                    }
+                    else if (input == "venmo")
+                    {
+                        PayVenmo();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Was not able to verify that choice. We'll try again.");
+                        continue;
+                    }
+                    move = false;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input, please try again.");
+                }
+            }
+        }
         public static void PayCash()
         {
             Console.WriteLine("Great you are paying with cash!");
@@ -18,7 +53,7 @@ namespace MidTerm
                 string CashInserted = Console.ReadLine();
                 //int CashInsertedNum = Int32.Parse(CashInserted);
 
-                if (Validator.IntChecker(CashInserted))
+                if (Validator.DoubleChecker(CashInserted))
                 {
                     bool enough = true;
                     while (enough)
@@ -27,22 +62,30 @@ namespace MidTerm
                         double Cash = double.Parse(CashInserted);
                         double SubTotal = double.Parse(Checkout.SubTotalCart(Product.ShoppingCart));
                         double Tax = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
-                        double Total = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
-                        double Change = Total - Cash;
+                        double Totalz = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
+                        double Total = Math.Round(Totalz, 2);
+                        double Change = Cash - Total;
+                        Console.WriteLine("\n\n\nBelow will be the name of the item in your shopping cart, then the quantity of said item, and finally the price you are buying said item at.");
+                        foreach (string item in Product.ShoppingCart)
+                        {
+                            Console.WriteLine(item);
+                        }
                         Console.WriteLine($"Tax on your items was {Tax}.");
-                        Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of{Total}.");
+                        Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of {Total}.");
 
                         if (Change < 0)
                         {
                             Console.WriteLine($"Insufficient amount! Please insert at least {Total}.");
+                            enough = false;
+                            cash = true;
                         }
                         else if (Change >= 0)
                         {
                             Console.WriteLine($"Your change is {Change}.");
                             Console.WriteLine("Have a great day!");
                             enough = false;
+                            cash = false;
                         }
-                        cash = false;
                     }
                 }
                 else if (!Validator.IntChecker(CashInserted))
@@ -58,7 +101,7 @@ namespace MidTerm
             }
         }
 
-        public static void GetCredit()
+        public static void PayCredit()
         {
             //Regex ValidateFullCardNumber = new Regex(@"^[0 - 9]{ 16}$");
             //Regex ValidateExpiration = new Regex(@"(0[1-9]|1[12])[/](09|[1-9][9])");
@@ -86,10 +129,17 @@ namespace MidTerm
                         {
                             Console.WriteLine("Thanks!");
                             double SubTotal = double.Parse(Checkout.SubTotalCart(Product.ShoppingCart));
-                            double Tax = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
-                            double Total = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
+                            double Taxz = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
+                            double Tax = Math.Round(Taxz, 2);
+                            double Totalz = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
+                            double Total = Math.Round(Totalz,2);
+                            Console.WriteLine("\n\n\nBelow will be the name of the item in your shopping cart, then the quantity of said item, and finally the price you are buying said item at.");
+                            foreach (string item in Product.ShoppingCart)
+                            {
+                                Console.WriteLine(item);
+                            }
                             Console.WriteLine($"Tax on your items was {Tax}.");
-                            Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of{Total}.");
+                            Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of {Total}.");
                             Console.WriteLine($"You will be charged {Total}. ");
                             Console.WriteLine("One moment");
                             Console.WriteLine("1");
@@ -104,12 +154,13 @@ namespace MidTerm
                     }
                     else
                     {
-                        Console.WriteLine("Not a valid card number");
+                        Console.WriteLine("Not a valid expiration date");
                     }
                 }
                 else
                 {
-                    Console.WriteLine("Not a valid expiration date");
+                    Console.WriteLine("Not a valid card number");
+
                 }
             }
         }
@@ -129,10 +180,17 @@ namespace MidTerm
                 if (Validator.VenmoUserNameChecker(VenmoUsername))
                 {
                     double SubTotal = double.Parse(Checkout.SubTotalCart(Product.ShoppingCart));
-                    double Tax = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
-                    double Total = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
+                    double Taxz = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
+                    double Tax = Math.Round(Taxz, 2);
+                    double Totalz = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
+                    double Total = Math.Round(Totalz, 2);
+                    Console.WriteLine("\n\n\nBelow will be the name of the item in your shopping cart, then the quantity of said item, and finally the price you are buying said item at.");
+                    foreach (string item in Product.ShoppingCart)
+                    {
+                        Console.WriteLine(item);
+                    }
                     Console.WriteLine($"Tax on your items was {Tax}.");
-                    Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of{Total}.");
+                    Console.WriteLine($"Item cost plus tax on items leaves you with a grand total of {Total}.");
                     Console.WriteLine($"You will be charged {Total}. ");
                     Console.WriteLine("One moment");
                     Console.WriteLine("1");

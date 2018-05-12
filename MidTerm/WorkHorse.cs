@@ -52,7 +52,7 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabDairyName(1)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(1)} would you like?");
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -89,6 +89,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (DairyChoice == "2" || DairyChoice == "Cheese")
@@ -99,7 +101,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabDairyName(2)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(2)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -135,6 +138,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (DairyChoice == "3" || DairyChoice == "Milk")
@@ -145,7 +150,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabDairyName(3)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(3)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -181,6 +187,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else
@@ -208,7 +216,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabProduceName(1)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(1)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -244,6 +253,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (ProduceChoice == "2" || ProduceChoice == "Pear")
@@ -254,7 +265,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabProduceName(2)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(2)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -290,6 +302,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (ProduceChoice == "3" || ProduceChoice == "Banana")
@@ -300,7 +314,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabProduceName(3)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(3)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -336,6 +351,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else
@@ -364,7 +381,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabMeatsName(1)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(1)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -400,6 +418,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (MeatChoice == "2" || MeatChoice == "filet mignon" || MeatChoice == "filet")
@@ -410,7 +430,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabMeatsName(2)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(2)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -446,6 +467,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (MeatChoice == "3" || MeatChoice == "ground beef" || MeatChoice == "beef")
@@ -456,7 +479,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabMeatsName(3)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(3)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -492,6 +516,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else
@@ -520,7 +546,7 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabSnacksName(1)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(1)} would you like?");
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -556,6 +582,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (SnackChoice == "2" || SnackChoice == "cookies" || SnackChoice == "cookie")
@@ -566,7 +594,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabSnacksName(2)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(2)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -602,6 +631,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (SnackChoice == "3" || SnackChoice == "granola bar" || SnackChoice == "granola")
@@ -612,7 +643,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabSnacksName(3)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(3)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -648,6 +680,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else
@@ -676,7 +710,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabBeveragesName(1)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(1)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -712,6 +747,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (BeverageChoice == "2" || BeverageChoice == "tea")
@@ -722,7 +759,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabBeveragesName(2)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(2)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -758,6 +796,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else if (BeverageChoice == "3" || BeverageChoice == "gatorade")
@@ -768,7 +808,8 @@ namespace MidTerm
                             bool move = true;
                             while (move)
                             {
-                                Console.WriteLine($"\n\nHow many would you like of {Inventory.GrabBeveragesName(3)}");
+                                Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(3)} would you like?");
+
                                 string quantity = Console.ReadLine();
                                 if (Validator.IntChecker(quantity))
                                 {
@@ -804,6 +845,8 @@ namespace MidTerm
                                 {
                                     Console.WriteLine(prod);
                                 }
+                                Total_Calc.Payment();
+
                             }
                         }
                         else
