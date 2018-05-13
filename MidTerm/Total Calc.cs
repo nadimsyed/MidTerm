@@ -104,7 +104,7 @@ namespace MidTerm
         public static void PayCredit()
         {
             //Regex ValidateFullCardNumber = new Regex(@"^[0 - 9]{ 16}$");
-            //Regex ValidateExpiration = new Regex(@"(0[1-9]|1[12])[/](09|[1-9][9])");
+            //Regex ValidateExpiration = new Regex(@"^(0[1-9]|1[12])[/](2[0-9]|[1-9][9])$");
             //Regex ValidateCardBack = new Regex(@"^\d{3}$");
             bool move = true;
             while (move)

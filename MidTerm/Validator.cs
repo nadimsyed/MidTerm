@@ -16,7 +16,7 @@ namespace MidTerm
 
         public static bool CreditCardExpirationChecker(string x)
         {
-            return Regex.IsMatch(x, @"(0[1-9]|1[12])[/](09|[1-9][9])");
+            return Regex.IsMatch(x, @"(^(0[1-9]|1[12])[/](2[0-9]|[1-9][9])$)");
         }
 
         public static bool VenmoUserNameChecker(string x)
