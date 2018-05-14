@@ -16,10 +16,11 @@ namespace MidTerm
 
         public static void AddItem()
         {
+            int attempts = 0;
+
             bool truth = true;
             while (truth)
             {
-                int attempts = 0;
                 Console.WriteLine("Do you want to add an item to the inventory? (Y/N)");
                 string input = Console.ReadLine().ToLower();
                 if (!Validator.IntChecker(input) && !Validator.SpaceEnterChecker(input))
@@ -44,25 +45,35 @@ namespace MidTerm
                                 if (selection == "1" || selection == "dairy")
                                 {
                                     AddingToTxt(@"Dairy.txt", "Dairy", DairyCount());
+                                    truth = false;
+
                                 }
                                 else if (selection == "2" || selection == "produce")
                                 {
                                     AddingToTxt(@"Produce.txt", "Produce",ProduceCount());
+                                    truth = false;
+
 
                                 }
                                 else if (selection == "3" || selection == "meats")
                                 {
                                     AddingToTxt(@"Meats.txt", "Meats", MeatsCount());
+                                    truth = false;
+
 
                                 }
                                 else if (selection == "4" || selection == "snacks")
                                 {
                                     AddingToTxt(@"Snacks.txt", "Snacks", SnacksCount());
+                                    truth = false;
+
 
                                 }
                                 else if (selection == "5" || selection == "beverages")
                                 {
                                     AddingToTxt(@"Beverages.txt", "Beverages",BeveragesCount());
+                                    truth = false;
+
 
                                 }
                                 else
@@ -73,18 +84,19 @@ namespace MidTerm
                         }
                         else if (password != "Test")
                         {
-                            if (attempts == 3)
+                            if (attempts == 2)
                             {
                                 Console.WriteLine("Too many invalid attempts. Will send you out of admin window.");
                                 truth = false; 
                             }
+                            else
+                            {
+                                Console.WriteLine("Incorrect password. Try again!");
+                                attempts++;
+                            }
                             //continue;
                         }
-                        else
-                        {
-                            Console.WriteLine("Incorrect password. Try again!");
-                            attempts++;
-                        }
+                        
                     }
                     else if (input == "n")
                     {
