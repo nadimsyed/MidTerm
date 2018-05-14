@@ -12,9 +12,26 @@ namespace MidTerm
     {
         static void Main(string[] args)
         {
+            Inventory.DairyRead();
+            Inventory.BeveragesRead();
+            Inventory.ProduceRead();
+            Inventory.MeatsRead();
+            Inventory.SnacksRead();
             //Console.WriteLine(Inventory.Products.Count); 
             //Inventory.AddItem();
             WorkHorse.MainWork();
+            //foreach (string item in Product.Dairy)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Inventory.Dairy();
+            //foreach (string[] item in Product.ShoppingCart)
+            //{
+            //    foreach (string z in item)
+            //    {
+            //        Console.WriteLine(z);
+            //    }
+            //}
         }
     }
 }
