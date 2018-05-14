@@ -17,22 +17,9 @@ namespace MidTerm
             Inventory.ProduceRead();
             Inventory.MeatsRead();
             Inventory.SnacksRead();
-            //Console.WriteLine(Inventory.Products.Count); 
-            //Inventory.AddItem();
+
+            Inventory.AddItem();
             WorkHorse.MainWork();
-            //Console.WriteLine(Inventory.DairyCount());
-            //foreach (string item in Product.Dairy)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //Inventory.Dairy();
-            //foreach (string[] item in Product.ShoppingCart)
-            //{
-            //    foreach (string z in item)
-            //    {
-            //        Console.WriteLine(z);
-            //    }
-            //}
         }
     }
 }

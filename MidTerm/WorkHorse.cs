@@ -50,22 +50,24 @@ namespace MidTerm
                                 Console.WriteLine(Inventory.GrabDairy(i));
                             }
 
-                            string DairyChoice = Console.ReadLine().ToLower();
+                            string DairyChoiceS = Console.ReadLine().ToLower();
 
-                            if (DairyChoice == (--i).ToString())
+                            if (Validator.IntChecker(DairyChoiceS))
                             {
-                                Console.WriteLine($"You added {Inventory.GrabDairyName(i)} to your cart");
+                                int DairyChoice = int.Parse(DairyChoiceS);
+
+                                Console.WriteLine($"You added {Inventory.GrabDairyName(DairyChoice)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(i)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(DairyChoice)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabDairyName(i), quantity, Inventory.GrabDairyPrice(i));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(i)}\n\n");
+                                        Product.RunningCart(Inventory.GrabDairyName(DairyChoice), quantity, Inventory.GrabDairyPrice(DairyChoice));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(DairyChoice)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
@@ -265,22 +267,24 @@ namespace MidTerm
                                 Console.WriteLine(Inventory.GrabProduce(i));
                             }
 
-                            string ProduceChoice = Console.ReadLine().ToLower();
+                            string ProduceChoiceS = Console.ReadLine().ToLower();
 
-                            if (ProduceChoice == (--i).ToString())
+                            if (Validator.IntChecker(ProduceChoiceS))
                             {
-                                Console.WriteLine($"You added {Inventory.GrabProduceName(i)} to your cart");
+                                int ProduceChoice = int.Parse(ProduceChoiceS);
+                                
+                                Console.WriteLine($"You added {Inventory.GrabProduceName(ProduceChoice)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(i)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(ProduceChoice)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabProduceName(i), quantity, Inventory.GrabProducePrice(i));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(i)}\n\n");
+                                        Product.RunningCart(Inventory.GrabProduceName(ProduceChoice), quantity, Inventory.GrabProducePrice(ProduceChoice));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(ProduceChoice)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
@@ -495,22 +499,24 @@ namespace MidTerm
                                 Console.WriteLine(Inventory.GrabMeats(i));
                             }
 
-                            string MeatsChoice = Console.ReadLine().ToLower();
+                            string MeatsChoiceS = Console.ReadLine().ToLower();
 
-                            if (MeatsChoice == (--i).ToString())
+                            if (Validator.IntChecker(MeatsChoiceS))
                             {
-                                Console.WriteLine($"You added {Inventory.GrabMeatsName(i)} to your cart");
+                                int MeatsChoice = int.Parse(MeatsChoiceS);
+
+                                Console.WriteLine($"You added {Inventory.GrabMeatsName(MeatsChoice)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(i)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(MeatsChoice)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabMeatsName(i), quantity, Inventory.GrabMeatsPrice(i));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(i)}\n\n");
+                                        Product.RunningCart(Inventory.GrabMeatsName(MeatsChoice), quantity, Inventory.GrabMeatsPrice(MeatsChoice));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(MeatsChoice)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
@@ -725,22 +731,23 @@ namespace MidTerm
                                 Console.WriteLine(Inventory.GrabSnacks(i));
                             }
 
-                            string SnacksChoice = Console.ReadLine().ToLower();
+                            string SnacksChoiceS = Console.ReadLine().ToLower();
 
-                            if (SnacksChoice == (--i).ToString())
+                            if (Validator.IntChecker(SnacksChoiceS))
                             {
-                                Console.WriteLine($"You added {Inventory.GrabSnacksName(i)} to your cart");
+                                int SnackssChoice = int.Parse(SnacksChoiceS);
+                                Console.WriteLine($"You added {Inventory.GrabSnacksName(SnackssChoice)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(i)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(SnackssChoice)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabSnacksName(i), quantity, Inventory.GrabSnacksPrice(i));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(i)}\n\n");
+                                        Product.RunningCart(Inventory.GrabSnacksName(SnackssChoice), quantity, Inventory.GrabSnacksPrice(SnackssChoice));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(SnackssChoice)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
@@ -954,22 +961,23 @@ namespace MidTerm
                                 Console.WriteLine(Inventory.GrabBeverages(i));
                             }
 
-                            string BeveragesChoice = Console.ReadLine().ToLower();
+                            string BeveragesChoiceS = Console.ReadLine().ToLower();
 
-                            if (BeveragesChoice == (--i).ToString())
+                            if (Validator.IntChecker(BeveragesChoiceS))
                             {
-                                Console.WriteLine($"You added {Inventory.GrabBeveragesName(i)} to your cart");
+                                int BeveragesChoice = int.Parse(BeveragesChoiceS);
+                                Console.WriteLine($"You added {Inventory.GrabBeveragesName(BeveragesChoice)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(i)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(BeveragesChoice)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabBeveragesName(i), quantity, Inventory.GrabBeveragesPrice(i));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(i)}\n\n");
+                                        Product.RunningCart(Inventory.GrabBeveragesName(BeveragesChoice), quantity, Inventory.GrabBeveragesPrice(BeveragesChoice));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(BeveragesChoice)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
