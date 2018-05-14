@@ -103,10 +103,10 @@ namespace MidTerm
             }
         }
 
-        public static void AddingToDairyTxt(string txt, string category, int inventoryCounter, int stock = 20)
+        public static void AddingToTxt(string txt, string category, int inventoryCounter, int stock = 20)
         {
-            ArrayList Products = new ArrayList();
-            StreamReader sr = null;
+            //ArrayList Products = new ArrayList();
+            //StreamReader sr = null;
             string itemName = "";
             string itemPrice = "";
             string itemCategory = category;
@@ -172,41 +172,43 @@ namespace MidTerm
                 }
             }
 
-            sr = new StreamReader(txt);
+            //sr = new StreamReader(txt);
 
-            while (!sr.EndOfStream)
-            {
-                String line = sr.ReadLine();
+            //while (!sr.EndOfStream)
+            //{
+                //String line = sr.ReadLine();
 
-                string[] z = line.Split('\t');
+                //string[] z = line.Split('\t');
 
-                Products.Add(z);
-                counter++;
+                //Products.Add(z);
+                //counter++;
 
                 StreamWriter sw = null;
                 try
                 {
                     //tried false to but didnt work. willl have to look at how to append
-                    sw = new StreamWriter(@"Dairy2.txt", true);
+                    sw = new StreamWriter(txt, true);
                     //foreach (string[] some in Products)
                     //{
-                    if (inventoryCounter <= 3)
-                    {
-                        int countDracula = 0;
-                        foreach (string item in z)
-                        {
-                            countDracula++;
-                            if (countDracula == 6)
-                            {
-                                sw.WriteLine(item + "\t");
-                            }
-                            else
-                            {
-                                sw.Write(item + "\t");
-                            }
-                        }
-                        countDracula = 0; 
-                    }
+                    //if (inventoryCounter <= 3)
+                    //{
+                    
+                    //    int countDracula = 0;
+                    //    foreach (string item in Product.Dairy)
+                    //    {
+                    //        countDracula++;
+                    //        counter++;
+                    //        if (countDracula == 3)
+                    //        {
+                    //            sw.WriteLine(item + "\t");
+                    //        }
+                    //        else
+                    //        {
+                    //            sw.Write(item + "\t");
+                    //        }
+                    //    }
+                    //    countDracula = 0; 
+                    //}
                     //}
                     //else
                     //{
@@ -217,14 +219,14 @@ namespace MidTerm
                     //    }
                     //    countDracula = 0;
                     //}
-                    if (counter == inventoryCounter)
-                    {
-                        sw.WriteLine(itemName + "\t" + itemPrice + "\t" + itemCategory + "\t" + itemUnit + "\t" + itemDescription + "\t" + stockAmount + "\t");
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    //if (counter == inventoryCounter)
+                    //{
+                        sw.Write(itemName + "\t" + itemPrice + "\t" + itemCategory + "\t" + itemUnit + "\t" + itemDescription + "\t" + stockAmount + "\t");
+                    //}
+                    //else
+                    //{
+                    //    //continue;
+                    //}
                 }
                 catch (UnauthorizedAccessException)
                 {
@@ -243,7 +245,7 @@ namespace MidTerm
                         sw.Close();
                     }
                 }
-            }
+            //}
         }
 
         //can change stock but makes spaces and seperates the stock spot to seperate lines
@@ -253,7 +255,7 @@ namespace MidTerm
         //Gatorade Beverages	1.50	20 Fl oz    Electrolytes Baby!	20
 
         //Figure out how to append, will have to redo the file from scratch
-        public static void AddingToTxt(string txt, string category,int inventoryCounter,int stock = 20)
+        public static void IncompleteAddingToTxt(string txt, string category,int inventoryCounter,int stock = 20)
         {
             ArrayList Products = new ArrayList();
             StreamReader sr = null;
