@@ -44,27 +44,28 @@ namespace MidTerm
                             //{
                             //    Console.WriteLine(Inventory.GrabDairy(i)); 
                             //}
-                            for (int i = 1; i <= Inventory.DairyCount(); i++)
+                            int i = 0;
+                            for (i = 1; i <= Product.Dairy.Count; i++)
                             {
                                 Console.WriteLine(Inventory.GrabDairy(i));
                             }
-                            
+
                             string DairyChoice = Console.ReadLine().ToLower();
 
-                            if (DairyChoice == "1" || DairyChoice == "butter")
+                            if (DairyChoice == (--i).ToString())
                             {
-                                //Console.WriteLine($"You added {DairyChoice} to your cart");
+                                Console.WriteLine($"You added {Inventory.GrabDairyName(i)} to your cart");
                                 //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(1)} would you like?");
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(i)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
                                         //int quantityNum = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabDairyName(1), quantity, Inventory.GrabDairyPrice(1));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(1)}\n\n");
+                                        Product.RunningCart(Inventory.GrabDairyName(i), quantity, Inventory.GrabDairyPrice(i));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(i)}\n\n");
                                         //Code below is if we have to have a running total for the cart. just gonna have to copy into all
                                         //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
@@ -99,104 +100,153 @@ namespace MidTerm
 
                                 }
                             }
-                            else if (DairyChoice == "2" || DairyChoice == "Cheese")
-                            {
-                                //Console.WriteLine($"You added {DairyChoice} to your cart");
-                                //(add cheese to cart)
 
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(2)} would you like?");
+                            //if (DairyChoice == "1" || DairyChoice == "butter")
+                            //{
+                            //    //Console.WriteLine($"You added {DairyChoice} to your cart");
+                            //    //(add butter to cart)
+                            //    bool move = true;
+                            //    while (move)
+                            //    {
+                            //        Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(1)} would you like?");
+                            //        string quantity = Console.ReadLine();
+                            //        if (Validator.IntChecker(quantity))
+                            //        {
+                            //            //int quantityNum = int.Parse(quantity);
+                            //            Product.RunningCart(Inventory.GrabDairyName(1), quantity, Inventory.GrabDairyPrice(1));
+                            //            Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(1)}\n\n");
+                            //            //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                            //            //  the other spots
+                            //            Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+                            //            move = false;
+                            //        }
+                            //        else
+                            //        {
+                            //            Console.WriteLine("Not a number, try again!");
+                            //            continue;
+                            //        }
+                            //    }
+                            //    bool movein = Continue();
+                            //    if (movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = true;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //    }
+                            //    else if (!movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = false;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //        Console.WriteLine("All items on your shopping cart is below");
+                            //        foreach (string prod in Product.ShoppingCart)
+                            //        {
+                            //            Console.WriteLine(prod);
+                            //        }
+                            //        Total_Calc.Payment();
 
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabDairyName(2), quantity, Inventory.GrabDairyPrice(2));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(2)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+                            //    }
+                            //}
+                            //else if (DairyChoice == "2" || DairyChoice == "Cheese")
+                            //{
+                            //    //Console.WriteLine($"You added {DairyChoice} to your cart");
+                            //    //(add cheese to cart)
 
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
+                            //    bool move = true;
+                            //    while (move)
+                            //    {
+                            //        Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(2)} would you like?");
 
-                                }
-                            }
-                            else if (DairyChoice == "3" || DairyChoice == "Milk")
-                            {
-                                //Console.WriteLine($"You added {DairyChoice} to your cart");
-                                //(add milk to cart)
+                            //        string quantity = Console.ReadLine();
+                            //        if (Validator.IntChecker(quantity))
+                            //        {
+                            //            //int quantity = int.Parse(quantity);
+                            //            Product.RunningCart(Inventory.GrabDairyName(2), quantity, Inventory.GrabDairyPrice(2));
+                            //            Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(2)}\n\n");
+                            //            Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
 
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(3)} would you like?");
+                            //            move = false;
+                            //        }
+                            //        else
+                            //        {
+                            //            Console.WriteLine("Not a number, try again!");
+                            //            continue;
+                            //        }
+                            //    }
+                            //    bool movein = Continue();
+                            //    if (movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = true;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //    }
+                            //    else if (!movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = false;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //        Console.WriteLine("All items on your shopping cart is below");
+                            //        foreach (string prod in Product.ShoppingCart)
+                            //        {
+                            //            Console.WriteLine(prod);
+                            //        }
+                            //        Total_Calc.Payment();
 
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabDairyName(3), quantity, Inventory.GrabDairyPrice(3));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(3)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+                            //    }
+                            //}
+                            //else if (DairyChoice == "3" || DairyChoice == "Milk")
+                            //{
+                            //    //Console.WriteLine($"You added {DairyChoice} to your cart");
+                            //    //(add milk to cart)
 
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
+                            //    bool move = true;
+                            //    while (move)
+                            //    {
+                            //        Console.WriteLine($"\n\nHow many {Inventory.GrabDairyName(3)} would you like?");
 
-                                }
-                            }
+                            //        string quantity = Console.ReadLine();
+                            //        if (Validator.IntChecker(quantity))
+                            //        {
+                            //            //int quantity = int.Parse(quantity);
+                            //            Product.RunningCart(Inventory.GrabDairyName(3), quantity, Inventory.GrabDairyPrice(3));
+                            //            Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabDairyName(3)}\n\n");
+                            //            Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                            //            move = false;
+                            //        }
+                            //        else
+                            //        {
+                            //            Console.WriteLine("Not a number, try again!");
+                            //            continue;
+                            //        }
+                            //    }
+                            //    bool movein = Continue();
+                            //    if (movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = true;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //    }
+                            //    else if (!movein)
+                            //    {
+                            //        ItemChoice = false;
+                            //        truth = false;
+                            //        Console.WriteLine();
+                            //        Console.WriteLine();
+                            //        Console.WriteLine("All items on your shopping cart is below");
+                            //        foreach (string prod in Product.ShoppingCart)
+                            //        {
+                            //            Console.WriteLine(prod);
+                            //        }
+                            //        Total_Calc.Payment();
+
+                            //    }
+                            //}
                             else
                             {
                                 Console.WriteLine("Sorry that was not a valid item, please try again");
@@ -209,127 +259,31 @@ namespace MidTerm
                         {
                             Console.WriteLine("Please select an item below:");
                             Console.WriteLine();
-                            Console.WriteLine(Inventory.GrabProduce(1));
-                            Console.WriteLine(Inventory.GrabProduce(2));
-                            Console.WriteLine(Inventory.GrabProduce(3));
+                            int i = 0;
+                            for (i = 1; i <= Product.Produce.Count; i++)
+                            {
+                                Console.WriteLine(Inventory.GrabProduce(i));
+                            }
+
                             string ProduceChoice = Console.ReadLine().ToLower();
 
-                            if (ProduceChoice == "1" || ProduceChoice == "apple")
+                            if (ProduceChoice == (--i).ToString())
                             {
-                                //Console.WriteLine($"You added {ProduceChoice} to your cart");
-                                //(add apple to cart)
-
+                                Console.WriteLine($"You added {Inventory.GrabProduceName(i)} to your cart");
+                                //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(1)} would you like?");
-
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(i)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabProduceName(1), quantity, Inventory.GrabProducePrice(1));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(1)}\n\n");
+                                        //int quantityNum = int.Parse(quantity);
+                                        Product.RunningCart(Inventory.GrabProduceName(i), quantity, Inventory.GrabProducePrice(i));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(i)}\n\n");
+                                        //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                                        //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
-                            }
-                            else if (ProduceChoice == "2" || ProduceChoice == "Pear")
-                            {
-                                //Console.WriteLine($"You added {ProduceChoice} to your cart");
-                                //(add Pear to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(2)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabProduceName(2), quantity, Inventory.GrabProducePrice(2));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(2)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
-                            }
-                            else if (ProduceChoice == "3" || ProduceChoice == "Banana")
-                            {
-                                //Console.WriteLine($"You added {ProduceChoice} to your cart");
-                                //(add banana to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(3)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabProduceName(3), quantity, Inventory.GrabProducePrice(3));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(3)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
                                         move = false;
                                     }
                                     else
@@ -366,6 +320,167 @@ namespace MidTerm
                                 Console.WriteLine("Sorry that was not a valid item, please try again");
                             }
                         }
+                        //while (ItemChoice)
+                        //{
+                        //    Console.WriteLine("Please select an item below:");
+                        //    Console.WriteLine();
+                        //    Console.WriteLine(Inventory.GrabProduce(1));
+                        //    Console.WriteLine(Inventory.GrabProduce(2));
+                        //    Console.WriteLine(Inventory.GrabProduce(3));
+                        //    string ProduceChoice = Console.ReadLine().ToLower();
+
+                        //    if (ProduceChoice == "1" || ProduceChoice == "apple")
+                        //    {
+                        //        //Console.WriteLine($"You added {ProduceChoice} to your cart");
+                        //        //(add apple to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(1)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabProduceName(1), quantity, Inventory.GrabProducePrice(1));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(1)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (ProduceChoice == "2" || ProduceChoice == "Pear")
+                        //    {
+                        //        //Console.WriteLine($"You added {ProduceChoice} to your cart");
+                        //        //(add Pear to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(2)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabProduceName(2), quantity, Inventory.GrabProducePrice(2));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(2)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (ProduceChoice == "3" || ProduceChoice == "Banana")
+                        //    {
+                        //        //Console.WriteLine($"You added {ProduceChoice} to your cart");
+                        //        //(add banana to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabProduceName(3)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabProduceName(3), quantity, Inventory.GrabProducePrice(3));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabProduceName(3)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        Console.WriteLine("Sorry that was not a valid item, please try again");
+                        //    }
+                        //}
 
                     }
                     else if (CategorySelect == "3" || CategorySelect == "meats" || CategorySelect == "meat")
@@ -374,127 +489,31 @@ namespace MidTerm
                         {
                             Console.WriteLine("Please select an item below:");
                             Console.WriteLine();
-                            Console.WriteLine(Inventory.GrabMeats(1));
-                            Console.WriteLine(Inventory.GrabMeats(2));
-                            Console.WriteLine(Inventory.GrabMeats(3));
-                            string MeatChoice = Console.ReadLine().ToLower();
-
-                            if (MeatChoice == "1" || MeatChoice == "chicken breast" || MeatChoice == "chicken")
+                            int i = 0;
+                            for (i = 1; i <= Product.Meats.Count; i++)
                             {
-                                //Console.WriteLine($"You added {MeatChoice} to your cart");
-                                //(add chicken breast to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(1)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabMeatsName(1), quantity, Inventory.GrabMeatsPrice(1));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(1)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
+                                Console.WriteLine(Inventory.GrabMeats(i));
                             }
-                            else if (MeatChoice == "2" || MeatChoice == "filet mignon" || MeatChoice == "filet")
-                            {
-                                //Console.WriteLine($"You added {MeatChoice} to your cart");
-                                //(add filet mignon to cart)
 
+                            string MeatsChoice = Console.ReadLine().ToLower();
+
+                            if (MeatsChoice == (--i).ToString())
+                            {
+                                Console.WriteLine($"You added {Inventory.GrabMeatsName(i)} to your cart");
+                                //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(2)} would you like?");
-
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(i)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabMeatsName(2), quantity, Inventory.GrabMeatsPrice(2));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(2)}\n\n");
+                                        //int quantityNum = int.Parse(quantity);
+                                        Product.RunningCart(Inventory.GrabMeatsName(i), quantity, Inventory.GrabMeatsPrice(i));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(i)}\n\n");
+                                        //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                                        //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
-                            }
-                            else if (MeatChoice == "3" || MeatChoice == "ground beef" || MeatChoice == "beef")
-                            {
-                                //Console.WriteLine($"You added {MeatChoice} to your cart");
-                                //(add ground beef to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(3)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabMeatsName(3), quantity, Inventory.GrabMeatsPrice(3));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(3)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
                                         move = false;
                                     }
                                     else
@@ -531,6 +550,167 @@ namespace MidTerm
                                 Console.WriteLine("Sorry that was not a valid item, please try again");
                             }
                         }
+                        //while (ItemChoice)
+                        //{
+                        //    Console.WriteLine("Please select an item below:");
+                        //    Console.WriteLine();
+                        //    Console.WriteLine(Inventory.GrabMeats(1));
+                        //    Console.WriteLine(Inventory.GrabMeats(2));
+                        //    Console.WriteLine(Inventory.GrabMeats(3));
+                        //    string MeatChoice = Console.ReadLine().ToLower();
+
+                        //    if (MeatChoice == "1" || MeatChoice == "chicken breast" || MeatChoice == "chicken")
+                        //    {
+                        //        //Console.WriteLine($"You added {MeatChoice} to your cart");
+                        //        //(add chicken breast to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(1)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabMeatsName(1), quantity, Inventory.GrabMeatsPrice(1));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(1)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (MeatChoice == "2" || MeatChoice == "filet mignon" || MeatChoice == "filet")
+                        //    {
+                        //        //Console.WriteLine($"You added {MeatChoice} to your cart");
+                        //        //(add filet mignon to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(2)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabMeatsName(2), quantity, Inventory.GrabMeatsPrice(2));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(2)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (MeatChoice == "3" || MeatChoice == "ground beef" || MeatChoice == "beef")
+                        //    {
+                        //        //Console.WriteLine($"You added {MeatChoice} to your cart");
+                        //        //(add ground beef to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabMeatsName(3)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabMeatsName(3), quantity, Inventory.GrabMeatsPrice(3));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabMeatsName(3)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        Console.WriteLine("Sorry that was not a valid item, please try again");
+                        //    }
+                        //}
 
                     }
                     else if (CategorySelect == "4" || CategorySelect == "snacks" || CategorySelect == "snack")
@@ -539,126 +719,31 @@ namespace MidTerm
                         {
                             Console.WriteLine("Please select an item below:");
                             Console.WriteLine();
-                            Console.WriteLine(Inventory.GrabSnacks(1));
-                            Console.WriteLine(Inventory.GrabSnacks(2));
-                            Console.WriteLine(Inventory.GrabSnacks(3));
-                            string SnackChoice = Console.ReadLine().ToLower();
-
-                            if (SnackChoice == "1" || SnackChoice == "chips")
+                            int i = 0;
+                            for (i = 1; i <= Product.Snacks.Count; i++)
                             {
-                                //Console.WriteLine($"You added {SnackChoice} to your cart");
-                                //(add chips to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(1)} would you like?");
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabSnacksName(1), quantity, Inventory.GrabSnacksPrice(1));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(1)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
+                                Console.WriteLine(Inventory.GrabSnacks(i));
                             }
-                            else if (SnackChoice == "2" || SnackChoice == "cookies" || SnackChoice == "cookie")
-                            {
-                                //Console.WriteLine($"You added {SnackChoice} to your cart");
-                                //(add filet cookies to cart)
 
+                            string SnacksChoice = Console.ReadLine().ToLower();
+
+                            if (SnacksChoice == (--i).ToString())
+                            {
+                                Console.WriteLine($"You added {Inventory.GrabSnacksName(i)} to your cart");
+                                //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(2)} would you like?");
-
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(i)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabSnacksName(2), quantity, Inventory.GrabSnacksPrice(2));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(2)}\n\n");
+                                        //int quantityNum = int.Parse(quantity);
+                                        Product.RunningCart(Inventory.GrabSnacksName(i), quantity, Inventory.GrabSnacksPrice(i));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(i)}\n\n");
+                                        //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                                        //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
-                            }
-                            else if (SnackChoice == "3" || SnackChoice == "granola bar" || SnackChoice == "granola")
-                            {
-                                //Console.WriteLine($"You added {SnackChoice} to your cart");
-                                //(add granola bar to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(3)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabSnacksName(3), quantity, Inventory.GrabSnacksPrice(3));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(3)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
                                         move = false;
                                     }
                                     else
@@ -695,6 +780,166 @@ namespace MidTerm
                                 Console.WriteLine("Sorry that was not a valid item, please try again");
                             }
                         }
+                        //while (ItemChoice)
+                        //{
+                        //    Console.WriteLine("Please select an item below:");
+                        //    Console.WriteLine();
+                        //    Console.WriteLine(Inventory.GrabSnacks(1));
+                        //    Console.WriteLine(Inventory.GrabSnacks(2));
+                        //    Console.WriteLine(Inventory.GrabSnacks(3));
+                        //    string SnackChoice = Console.ReadLine().ToLower();
+
+                        //    if (SnackChoice == "1" || SnackChoice == "chips")
+                        //    {
+                        //        //Console.WriteLine($"You added {SnackChoice} to your cart");
+                        //        //(add chips to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(1)} would you like?");
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabSnacksName(1), quantity, Inventory.GrabSnacksPrice(1));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(1)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (SnackChoice == "2" || SnackChoice == "cookies" || SnackChoice == "cookie")
+                        //    {
+                        //        //Console.WriteLine($"You added {SnackChoice} to your cart");
+                        //        //(add filet cookies to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(2)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabSnacksName(2), quantity, Inventory.GrabSnacksPrice(2));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(2)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                    
+                        //    else if (SnackChoice == "3" || SnackChoice == "granola bar" || SnackChoice == "granola")
+                        //    {
+                        //        //Console.WriteLine($"You added {SnackChoice} to your cart");
+                        //        //(add granola bar to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabSnacksName(3)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabSnacksName(3), quantity, Inventory.GrabSnacksPrice(3));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabSnacksName(3)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        Console.WriteLine("Sorry that was not a valid item, please try again");
+                        //    }
+                        //}
 
                     }
                     else if (CategorySelect == "5" || CategorySelect == "beverages" || CategorySelect == "beverage")
@@ -703,127 +948,31 @@ namespace MidTerm
                         {
                             Console.WriteLine("Please select an item below:");
                             Console.WriteLine();
-                            Console.WriteLine(Inventory.GrabBeverages(1));
-                            Console.WriteLine(Inventory.GrabBeverages(2));
-                            Console.WriteLine(Inventory.GrabBeverages(3));
-                            string BeverageChoice = Console.ReadLine().ToLower();
-
-                            if (BeverageChoice == "1" || BeverageChoice == "water")
+                            int i = 0;
+                            for (i = 1; i <= Product.Beverages.Count; i++)
                             {
-                                //Console.WriteLine($"You added {BeverageChoice} to your cart");
-                                //(add water to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(1)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabBeveragesName(1), quantity, Inventory.GrabBeveragesPrice(1));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(1)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
+                                Console.WriteLine(Inventory.GrabBeverages(i));
                             }
-                            else if (BeverageChoice == "2" || BeverageChoice == "tea")
-                            {
-                                //Console.WriteLine($"You added {BeverageChoice} to your cart");
-                                //(add tea cookies to cart)
 
+                            string BeveragesChoice = Console.ReadLine().ToLower();
+
+                            if (BeveragesChoice == (--i).ToString())
+                            {
+                                Console.WriteLine($"You added {Inventory.GrabBeveragesName(i)} to your cart");
+                                //(add butter to cart)
                                 bool move = true;
                                 while (move)
                                 {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(2)} would you like?");
-
+                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(i)} would you like?");
                                     string quantity = Console.ReadLine();
                                     if (Validator.IntChecker(quantity))
                                     {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabBeveragesName(2), quantity, Inventory.GrabBeveragesPrice(2));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(2)}\n\n");
+                                        //int quantityNum = int.Parse(quantity);
+                                        Product.RunningCart(Inventory.GrabBeveragesName(i), quantity, Inventory.GrabBeveragesPrice(i));
+                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(i)}\n\n");
+                                        //Code below is if we have to have a running total for the cart. just gonna have to copy into all
+                                        //  the other spots
                                         Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
-                                        move = false;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Not a number, try again!");
-                                        continue;
-                                    }
-                                }
-                                bool movein = Continue();
-                                if (movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = true;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                }
-                                else if (!movein)
-                                {
-                                    ItemChoice = false;
-                                    truth = false;
-                                    Console.WriteLine();
-                                    Console.WriteLine();
-                                    Console.WriteLine("All items on your shopping cart is below");
-                                    foreach (string prod in Product.ShoppingCart)
-                                    {
-                                        Console.WriteLine(prod);
-                                    }
-                                    Total_Calc.Payment();
-
-                                }
-                            }
-                            else if (BeverageChoice == "3" || BeverageChoice == "gatorade")
-                            {
-                                //Console.WriteLine($"You added {BeverageChoice} to your cart");
-                                //(add gatorade to cart)
-
-                                bool move = true;
-                                while (move)
-                                {
-                                    Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(3)} would you like?");
-
-                                    string quantity = Console.ReadLine();
-                                    if (Validator.IntChecker(quantity))
-                                    {
-                                        //int quantity = int.Parse(quantity);
-                                        Product.RunningCart(Inventory.GrabBeveragesName(3), quantity, Inventory.GrabBeveragesPrice(3));
-                                        Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(3)}\n\n");
-                                        Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
-
                                         move = false;
                                     }
                                     else
@@ -860,6 +1009,167 @@ namespace MidTerm
                                 Console.WriteLine("Sorry that was not a valid item, please try again");
                             }
                         }
+                        //while (ItemChoice)
+                        //{
+                        //    Console.WriteLine("Please select an item below:");
+                        //    Console.WriteLine();
+                        //    Console.WriteLine(Inventory.GrabBeverages(1));
+                        //    Console.WriteLine(Inventory.GrabBeverages(2));
+                        //    Console.WriteLine(Inventory.GrabBeverages(3));
+                        //    string BeverageChoice = Console.ReadLine().ToLower();
+
+                        //    if (BeverageChoice == "1" || BeverageChoice == "water")
+                        //    {
+                        //        //Console.WriteLine($"You added {BeverageChoice} to your cart");
+                        //        //(add water to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(1)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabBeveragesName(1), quantity, Inventory.GrabBeveragesPrice(1));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(1)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (BeverageChoice == "2" || BeverageChoice == "tea")
+                        //    {
+                        //        //Console.WriteLine($"You added {BeverageChoice} to your cart");
+                        //        //(add tea cookies to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(2)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabBeveragesName(2), quantity, Inventory.GrabBeveragesPrice(2));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(2)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else if (BeverageChoice == "3" || BeverageChoice == "gatorade")
+                        //    {
+                        //        //Console.WriteLine($"You added {BeverageChoice} to your cart");
+                        //        //(add gatorade to cart)
+
+                        //        bool move = true;
+                        //        while (move)
+                        //        {
+                        //            Console.WriteLine($"\n\nHow many {Inventory.GrabBeveragesName(3)} would you like?");
+
+                        //            string quantity = Console.ReadLine();
+                        //            if (Validator.IntChecker(quantity))
+                        //            {
+                        //                //int quantity = int.Parse(quantity);
+                        //                Product.RunningCart(Inventory.GrabBeveragesName(3), quantity, Inventory.GrabBeveragesPrice(3));
+                        //                Console.WriteLine($"\n\nSuccessfully added {quantity}: {Inventory.GrabBeveragesName(3)}\n\n");
+                        //                Console.WriteLine(Checkout.LineTotal(Product.ShoppingCart));
+
+                        //                move = false;
+                        //            }
+                        //            else
+                        //            {
+                        //                Console.WriteLine("Not a number, try again!");
+                        //                continue;
+                        //            }
+                        //        }
+                        //        bool movein = Continue();
+                        //        if (movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = true;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //        }
+                        //        else if (!movein)
+                        //        {
+                        //            ItemChoice = false;
+                        //            truth = false;
+                        //            Console.WriteLine();
+                        //            Console.WriteLine();
+                        //            Console.WriteLine("All items on your shopping cart is below");
+                        //            foreach (string prod in Product.ShoppingCart)
+                        //            {
+                        //                Console.WriteLine(prod);
+                        //            }
+                        //            Total_Calc.Payment();
+
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        Console.WriteLine("Sorry that was not a valid item, please try again");
+                        //    }
+                        //}
 
                     }
                     else

@@ -64,7 +64,7 @@ namespace MidTerm
                         double Tax = double.Parse(Checkout.TaxingSales(Product.ShoppingCart));
                         double Totalz = double.Parse(Checkout.GrandTotalofCart(Product.ShoppingCart));
                         double Total = Math.Round(Totalz, 2);
-                        double Change = Cash - Total;
+                        double Change = Math.Round(Cash - Total);
                         Console.WriteLine("\n\n\nBelow will be the name of the item in your shopping cart, then the quantity of said item, and finally the price you are buying said item at.");
                         foreach (string item in Product.ShoppingCart)
                         {
