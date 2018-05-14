@@ -113,7 +113,7 @@ namespace MidTerm
             string itemUnit = "";
             string itemDescription = "";
             int stockAmount = stock;
-            int counter = 0;
+            //int counter = 0;
             bool stage1 = true;
             while (stage1)
             {
@@ -221,7 +221,7 @@ namespace MidTerm
                     //}
                     //if (counter == inventoryCounter)
                     //{
-                        sw.Write(itemName + "\t" + itemPrice + "\t" + itemCategory + "\t" + itemUnit + "\t" + itemDescription + "\t" + stockAmount + "\t");
+                        sw.WriteLine(/*"\t" +*/ itemName + "\t" + itemPrice + "\t" + itemCategory + "\t" + itemUnit + "\t" + itemDescription + "\t" + stockAmount/* + "\t"*/);
                     //}
                     //else
                     //{

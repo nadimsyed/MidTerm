@@ -44,9 +44,11 @@ namespace MidTerm
                             //{
                             //    Console.WriteLine(Inventory.GrabDairy(i)); 
                             //}
-                            Console.WriteLine(Inventory.GrabDairy(1));
-                            Console.WriteLine(Inventory.GrabDairy(2));
-                            Console.WriteLine(Inventory.GrabDairy(3));
+                            for (int i = 1; i <= Inventory.DairyCount(); i++)
+                            {
+                                Console.WriteLine(Inventory.GrabDairy(i));
+                            }
+                            
                             string DairyChoice = Console.ReadLine().ToLower();
 
                             if (DairyChoice == "1" || DairyChoice == "butter")
