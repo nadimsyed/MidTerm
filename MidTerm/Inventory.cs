@@ -29,7 +29,7 @@ namespace MidTerm
                     {
                         Console.Write("Admin, please enter the password to get authorization: ");
                         string password = Console.ReadLine();
-                        if (password == "Test")
+                        if (password == "GroceryStoreGCMidTerm")
                         {
                             Console.WriteLine("Password confirmed");
                             bool select = true;
